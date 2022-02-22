@@ -1,0 +1,16 @@
+.divStyle  {
+    margin : 20px;
+    
+}
+.textStyle  {
+    font-family: "Suez One, serif";
+    font-size : 40px;
+    align-self:flex-start;
+}
+.buttonstyle {
+    margin: 15px;
+}
+
+.center {
+    text-align: center;
+}

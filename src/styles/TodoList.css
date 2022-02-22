@@ -1,0 +1,15 @@
+.crossed-line{
+    text-decoration: line-through;
+}
+.divStyle{
+    font-family : "PT Serif Caption, serif";
+    font-size : 20px;
+    margin-left: 10px;
+}
+
+.item {
+    display : 'inline';
+    margin-right: 200px;
+}
+
+
