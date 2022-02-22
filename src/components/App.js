@@ -115,7 +115,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.completed);
     return (
       <div className='divStyle'>
           <div className='center'>
