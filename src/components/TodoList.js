@@ -44,7 +44,6 @@ class TodoList extends Component {
             )
         }
         else{
-            console.log(todo);
             return (
                 <div className='divStyle' key={todo.todo_id}>
                     <div className='ui four column very relaxed grid'>
