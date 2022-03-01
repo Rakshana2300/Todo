@@ -26,12 +26,15 @@ class TodoList extends Component {
         if(todo.completed && this.props.showAll){
             return (
                 <div className='divStyle' key={todo.todo_id}>
-                    <div className='ui three column very relaxed grid'>
+                    <div className='ui four column very relaxed grid'>
                         <div className='column'>
-                            <p className='crossed-line item' onClick={(event)=>this.completedTask(todo,event)}>{todo.description}</p>
+                            <p className='crossed-line item'>{todo.description}</p>
                         </div>
                         <div className='column'>
                             <Edit todo = {todo} onEdit = {this.editTodo}/>
+                        </div>
+                        <div className='column'>
+                            <button className = 'btn btn-primary' type='submit' onClick={(event)=>this.completedTask(todo,event)}>Complete</button>
                         </div>
                         <div className='column'>
                             <button className = 'btn btn-danger' type='submit' onClick = {()=>this.removeTodo(todo.todo_id)}>Delete</button>
@@ -44,13 +47,16 @@ class TodoList extends Component {
             console.log(todo);
             return (
                 <div className='divStyle' key={todo.todo_id}>
-                    <div className='ui three column very relaxed grid'>
+                    <div className='ui four column very relaxed grid'>
                         <div className='column'>
                             <p className='item' onClick={(event)=>this.completedTask(todo,event)}>{todo.description}</p>
                         </div>
                         <div className='column'>
                             <Edit todo = {todo} onEdit = {this.editTodo}/>
                         </div>
+                        {this.props.showAll && <div className='column'>
+                            <button className = 'btn btn-primary' type='submit' onClick={(event)=>this.completedTask(todo,event)}>Complete</button>
+                        </div>}
                         <div className='column'>
                             <button className = 'btn btn-danger' type='submit' onClick = {()=>this.removeTodo(todo.todo_id)}>Delete</button>
                         </div>
